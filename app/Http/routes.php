@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//indexをホーム画面に設定
+Route::get('/', 'TasksController@index');
+
+//TasksControllerへのルーティング
+Route::resource('tasks', 'TasksController');

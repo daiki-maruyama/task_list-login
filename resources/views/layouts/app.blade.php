@@ -1,0 +1,15 @@
+<!--html共通構成-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Task List</title>
+    </head>
+
+    <body>
+        @include('errors.error_messages')
+        
+        @yield('content')
+    </body>
+</html>
