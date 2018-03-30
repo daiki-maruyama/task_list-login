@@ -16,7 +16,7 @@ class TasksController extends Controller
     {
         $tasks = Task::all();
 
-        return view('tasks.index', [    //全て取得の為、複数形で定義
+        return view('tasks.index', [    
             'tasks' => $tasks,
         ]);
     }
@@ -70,7 +70,7 @@ class TasksController extends Controller
     }
 
     // putまたはpatchでmessages/idにアクセスされた場合の「更新処理」
-    public function update(Request $request,$id)
+    public function update(Request $request, $id)
     {
         $this->validate($request, [
             'title' => 'required|max:25',
